@@ -1,10 +1,10 @@
 # [level 1] 모의고사 - 42840 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42840?language=javascript) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42840?gad_source=1&gad_campaignid=22499034228&gbraid=0AAAAAC_c4nCaOkAnjFG0FTXn3dDHYaT9-&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgngRNqzU6C5pqnTieTr1LEJiPNKQtl_xaWahPcFzGbaGz0rWYXYkT4aAr8EEALw_wcB) 
 
 ### 성능 요약
 
-메모리: 34.1 MB, 시간: 2.03 ms
+메모리: 36.7 MB, 시간: 29.47 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 02월 09일 17:45:33
+2026년 02월 14일 14:23:55
 
 ### 문제 설명
 

@@ -1,18 +1,21 @@
 function solution(answers) {
-    const answer = []
+    let count = [0, 0, 0]
     const one = [1, 2, 3, 4, 5]
     const two = [2, 1, 2, 3, 2, 4, 2, 5]
     const three = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+
+    for (let i = 0; i < answers.length; i++) {
+        if (one[i % 5] === answers[i % answers.length]) count[0]++
+        if (two[i % 8] === answers[i % answers.length]) count[1]++
+        if (three[i % 10] === answers[i % answers.length]) count[2]++
+    }
     
-    const onec = answers.filter((a,i)=> a === one[i % one.length]).length
-    const twoc = answers.filter((a,i)=> a === two[i % two.length]).length
-    const threec = answers.filter((a,i)=> a === three[i % three.length]).length
-    
-    const max = Math.max(onec, twoc, threec)
-    
-    if (onec === max) {answer.push(1)}
-    if (twoc === max) {answer.push(2)}
-    if (threec === max) {answer.push(3)}
+    const maxValue = Math.max(...count)
+
+    const answer = count.reduce((acc, val, i) => {
+        if (val === maxValue) acc.push(i + 1)
+        return acc
+    }, [])
     
     return answer
 }
