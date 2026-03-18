@@ -1,24 +1,29 @@
 function solution(genres, plays) {
-    const map = new Map()
-    let answer = []
+    const genrePlayCount = {}
+    const genreSongs = {} 
+    // { classic: [{id: 1, play: 400}, {id: 5, play: 100}], pop: [...] }
     
-    for (let i = 0; i < genres.length; i++) {
-        if (!map.has(genres[i])) {
-            map.set(genres[i], { total: 0, songs: [] })  
-        }
+    genres.forEach((genre, i) => {
+        genrePlayCount[genre] = (genrePlayCount[genre] || 0) + plays[i]
         
-        map.get(genres[i]).total += plays[i]
-        map.get(genres[i]).songs.push({ id: i, play: plays[i] })
-    }
-    
-    const sortedGenreEntries = [...map.entries()].sort((a, b) => b[1].total - a[1].total) 
-    // entries?
-    
-    sortedGenreEntries.forEach(([genre, info]) => {
-        info.songs.sort((a, b) => b.play - a.play)
-        
-        info.songs.slice(0, 2).forEach(song => answer.push(song.id))
+        if (!genreSongs[genre]) genreSongs[genre] = []
+        genreSongs[genre].push({id: i, play: plays[i]})
     })
+    
+    const sortedGenres = Object.keys(genrePlayCount).sort((a, b) => {
+        return genrePlayCount[b] - genrePlayCount[a]
+    })
+    
+    const answer = []
 
+    sortedGenres.forEach(genre => {
+        genreSongs[genre].sort((a, b) => {
+            if (a.play === b.play) return a.id - b.id
+            return b.play - a.play
+        })
+        
+        genreSongs[genre].slice(0, 2).map((item) => answer.push(item.id))
+    })
+        
     return answer
 }

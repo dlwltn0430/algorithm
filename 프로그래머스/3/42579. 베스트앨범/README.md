@@ -1,10 +1,10 @@
 # [level 3] 베스트앨범 - 42579 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42579) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42579?gad_source=1&gad_campaignid=22356298761&gbraid=0AAAAAC_c4nBHdfa692WOVgMssvNi-kPP0&gclid=Cj0KCQjwmunNBhDbARIsAOndKplgWik-ihKfcoMdWesiBM7tcUevd8s1cHN3XtOBrrlPOPn9SeZ1T6kaAj9KEALw_wcB) 
 
 ### 성능 요약
 
-메모리: 33.3 MB, 시간: 0.53 ms
+메모리: 33.4 MB, 시간: 0.40 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 03월 05일 23:50:38
+2026년 03월 18일 20:24:05
 
 ### 문제 설명
 
